@@ -14,12 +14,22 @@ public class TicTacToeShould {
 	}
 
 	@Test	void
-	return_X_at_the_second_slot_given_0_0_as_coordinates(){
+	return_X_at_the_second_slot_given_1_0_as_coordinates(){
 		var game = new TicTacToe();
 		var result = game.nextMove(1,0);
 
 		assertEquals(
 				"_|X|_" + "_|_|_" + "_|_|_",
+				result);
+	}
+
+	@Test	void
+	return_X_at_the_thirdd_slot_given_2_0_as_coordinates(){
+		var game = new TicTacToe();
+		var result = game.nextMove(1,0);
+
+		assertEquals(
+				"_|_|X" + "_|_|_" + "_|_|_",
 				result);
 	}
 
