@@ -53,4 +53,15 @@ public class TicTacToeShould {
 				  result);
 	}
 
+	@Test	void
+	return_X_at_the_last_slot_third_line_given_2_2_as_coordinates(){
+		var game = new TicTacToe();
+		var result = game.nextMove(2,2);
+
+		assertEquals(
+				"_|_|_" + "_|_|_" + "_|_|X",
+				result);
+	}
+
+
 }

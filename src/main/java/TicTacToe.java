@@ -6,8 +6,11 @@ public class TicTacToe {
 
 		String[] firstLine = {underscoreSymbol, underscoreSymbol, underscoreSymbol};
 		String[] secondLine = {underscoreSymbol, underscoreSymbol, underscoreSymbol};
+		String[] thirdLine = {underscoreSymbol, underscoreSymbol, underscoreSymbol};
 
-		if (yAxis == 1) {
+		if (yAxis == 2) {
+			thirdLine[xAxis] = playerOneSymbol;
+		}else if (yAxis == 1) {
 			secondLine[xAxis] = playerOneSymbol;
 		} else {
 			firstLine[xAxis] = playerOneSymbol;
@@ -15,7 +18,7 @@ public class TicTacToe {
 
 		return convertLineToString(firstLine) +
 				  convertLineToString(secondLine) +
-				  "_|_|_";
+				convertLineToString(thirdLine);
 	}
 
 	public String convertLineToString(String[] array) {
