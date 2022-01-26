@@ -34,9 +34,9 @@ public class TicTacToeShould {
 	}
 
 	@Test	void
-	return_X_at_the_first_slot_second_line_given_1_1_as_coordinates(){
+	return_X_at_the_first_slot_second_line_given_0_1_as_coordinates(){
 		var game = new TicTacToe();
-		var result = game.nextMove(1,1);
+		var result = game.nextMove(0,1);
 
 		assertEquals(
 				"_|_|_" + "X|_|_" + "_|_|_",
