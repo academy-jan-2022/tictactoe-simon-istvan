@@ -43,4 +43,14 @@ public class TicTacToeShould {
 				result);
 	}
 
+	@Test	void
+	return_X_at_the_first_slot_third_line_given_0_2_as_coordinates(){
+		var game = new TicTacToe();
+		var result = game.nextMove(0,2);
+
+		assertEquals(
+				  "_|_|_" + "_|_|_" + "X|_|_",
+				  result);
+	}
+
 }

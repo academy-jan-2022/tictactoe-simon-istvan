@@ -13,15 +13,13 @@ public class TicTacToe {
 			firstLine[xAxis] = playerOneSymbol;
 		}
 
-
-		String convertedArray = firstLine[0] + "|" + firstLine[1] + "|" + firstLine[2];
-		String secondLineConvertedArray = secondLine[0] + "|" + secondLine[1] + "|" + secondLine[2];
-
-				  //String.join("|", secondLine);
-		return convertedArray +
-				  secondLineConvertedArray +
+		return convertLineToString(firstLine) +
+				  convertLineToString(secondLine) +
 				  "_|_|_";
+	}
 
+	public String convertLineToString(String[] array) {
+		return String.join("|", array);
 	}
 
 
