@@ -63,5 +63,17 @@ public class TicTacToeShould {
 				result);
 	}
 
+	@Test	void
+	return_an_O_in_second_turn_at_the_second_slot_third_line_given_1_2_as_coordinates(){
+		var game = new TicTacToe();
+		var firstStep = game.nextMove(2,2);
+		var secondStep = game.nextMove(1,2);
 
+		assertEquals(
+				"_|_|_" + "_|_|_" + "_|_|X",
+				firstStep);
+		assertEquals(
+				"_|_|_" + "_|O|_" + "_|_|X",
+				secondStep);
+	}
 }
