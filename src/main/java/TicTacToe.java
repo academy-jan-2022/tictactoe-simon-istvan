@@ -4,26 +4,27 @@ public class TicTacToe {
 		String underscoreSymbol = "_";
 		String playerOneSymbol = "X";
 
-		String[] firstLine = {underscoreSymbol, underscoreSymbol, underscoreSymbol};
-		String[] secondLine = {underscoreSymbol, underscoreSymbol, underscoreSymbol};
-		String[] thirdLine = {underscoreSymbol, underscoreSymbol, underscoreSymbol};
+		String[][] defaultBoard = {
+				{underscoreSymbol, underscoreSymbol, underscoreSymbol},
+				{underscoreSymbol, underscoreSymbol, underscoreSymbol},
+				{underscoreSymbol, underscoreSymbol, underscoreSymbol}
+		};
 
-		if (yAxis == 2) {
-			thirdLine[xAxis] = playerOneSymbol;
-		}else if (yAxis == 1) {
-			secondLine[xAxis] = playerOneSymbol;
-		} else {
-			firstLine[xAxis] = playerOneSymbol;
+			defaultBoard[yAxis][xAxis] = playerOneSymbol;
+
+
+		return convertBoardToString(defaultBoard);
+	}
+
+	public String convertBoardToString(String[][] array) {
+
+		String convertArrayToString = "";
+
+		for (var i=0; i < array.length; i++){
+			convertArrayToString += String.join("|",array[i]);
 		}
 
-		return convertLineToString(firstLine) +
-				  convertLineToString(secondLine) +
-				convertLineToString(thirdLine);
+		return convertArrayToString;
 	}
-
-	public String convertLineToString(String[] array) {
-		return String.join("|", array);
-	}
-
 
 }
